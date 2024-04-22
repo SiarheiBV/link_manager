@@ -11,7 +11,7 @@ class Command(BaseCommand):
         faker = Faker()
 
         users = []
-        for _ in range(25):
+        for _ in range(10):
             user = CustomUser.objects.create_user(
                 username=faker.user_name(),
                 email=faker.email(),
@@ -20,7 +20,7 @@ class Command(BaseCommand):
             users.append(user)
 
         for user in users:
-            for _ in range(10):
+            for _ in range(5):
                 collection = Collection.objects.create(
                     name=faker.word(),
                     description=faker.sentence(),
