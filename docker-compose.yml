@@ -4,14 +4,14 @@ services:
   db:
     image: postgres:latest
     environment:
-      - POSTGRES_PASSWORD=12345678
-      - POSTGRES_USER=tw_user
-      - POSTGRES_DB=link_manager_db
+      - POSTGRES_PASSWORD=os.environ["DB_PASSWORD"]
+      - POSTGRES_USER=os.environ["DB_USER"]
+      - POSTGRES_DB=os.environ["DB_NAME"]
     volumes:
       - pg_data:/var/lib/postgresql/data
     ports:
       - '5434:5432'
-
+      
   app:
     build: .
     ports:

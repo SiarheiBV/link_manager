@@ -22,7 +22,7 @@ schema_view = get_schema_view(
         description="Документация для API по управлению ссылками и коллекциями",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="support@example.com"),
-        license=openapi.License(name="BSD License"),
+        license=openapi.License(name="MIT License"),
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
